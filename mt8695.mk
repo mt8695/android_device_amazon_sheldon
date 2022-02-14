@@ -32,6 +32,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt8695
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt8695.rc \
+    init.kamakiri.sh
+
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
