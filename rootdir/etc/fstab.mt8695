@@ -1,0 +1,22 @@
+# Android fstab file.
+#<src>           <mnt_point>         <type>    <mnt_flags and options>                 <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+/dev/block/platform/soc/11230000.mmc/by-name/system     /            ext4   ro wait,verify=/dev/block/platform/soc/11230000.mmc/by-name/metadata,recoveryonly
+/dev/block/platform/soc/11230000.mmc/by-name/vendor     /vendor      ext4   ro wait,verify=/dev/block/platform/soc/11230000.mmc/by-name/metadata,recoveryonly
+/dev/block/platform/soc/11230000.mmc/by-name/userdata   /data        ext4   noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,encryptable=footer
+/dev/block/platform/soc/11230000.mmc/by-name/cache      /cache       ext4   noatime,nosuid,nodev,noauto_da_alloc wait,check
+
+/devices/platform/soc/11240000.mmc* auto vfat defaults voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/soc/11271000.usb* auto vfat defaults voldmanaged=usbotg:auto,encryptable=userdata
+
+/dev/block/platform/soc/11230000.mmc/by-name/lk            /bootloader     emmc  defaults defaults
+/dev/block/platform/soc/11230000.mmc/by-name/boot          /boot           emmc  defaults defaults
+/dev/block/platform/soc/11230000.mmc/by-name/recovery      /recovery       emmc  defaults defaults
+/dev/block/platform/soc/11230000.mmc/by-name/logo          /logo           emmc  defaults defaults
+/dev/block/platform/soc/11230000.mmc/by-name/MISC          /misc           emmc  defaults defaults
+/dev/block/platform/soc/11230000.mmc/by-name/tee1          /tee1           emmc  defaults defaults
+/dev/block/platform/soc/11230000.mmc/by-name/tee2          /tee2           emmc  defaults defaults
+# Add for zram. zramsize can be in numeric (byte) , in percent or auto (detect by the system)
+/dev/block/zram0     /swap_zram0             swap      defaults                             wait,zramsize=392216000
