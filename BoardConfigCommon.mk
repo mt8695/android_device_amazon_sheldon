@@ -64,9 +64,6 @@ TARGET_KERNEL_CLANG_COMPILE := true
 NEED_KERNEL_MODULE_SYSTEM := true
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
-# System as Root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-
 # Partitions (Sizes)
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (none)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216         # 16384     * 1024 (mmcblk0p4)
