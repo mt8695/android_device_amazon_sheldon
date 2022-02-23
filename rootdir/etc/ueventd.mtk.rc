@@ -1,0 +1,102 @@
+# Change partition permission
+/dev/block/platform/soc/11230000.mmc/by-name/boot      0640    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/recovery  0640    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/secro     0640    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/seccfg    0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/proinfo   0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/nvram     0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/para      0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/logo      0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/frp       0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/odmdtbo   0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/odmdtbo_a 0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/odmdtbo_b 0660    root    system
+/dev/block/platform/soc/11230000.mmc/by-name/kb        0660    root    drmrpc
+/dev/block/platform/soc/11230000.mmc/by-name/dkb       0660    root    drmrpc
+
+# Connectivity
+/dev/stpwmt               0660   system     system
+/dev/wmtdetect            0660   system     system
+
+# BT
+/dev/stpbt                0660   bluetooth  bluetooth
+
+# GPS
+/dev/stpgps               0660   gps        gps
+/dev/gps                  0660   gps        system
+/dev/mt3337_gpsonly       0666   gps        system
+
+# WIFI
+/dev/wmtWifi              0660   wifi     wifi
+
+# FMRadio
+/dev/fm                   0660   media     media
+
+# NFC
+/dev/msr3110              0666   root       root
+/dev/mt6605               0660   nfc        radio
+
+# MTK BTIF driver
+/dev/btif                 0600   system     system
+
+# GPU
+/dev/dri/card0            0666   system     system
+/dev/dri/renderD128       0600   root       graphics
+
+# BLE
+/dev/bleremote_audio      0660   system     audio
+
+# GPT timer for WHA local timer
+/dev/mt_xgpt              0660   system     audio
+
+# MTK in-house TEE
+/dev/trustzone            0660   system       drmrpc
+
+# RGX device node
+/dev/pvrsrvkm             0666   root       root
+/dev/pvr_sync             0666   root       root
+
+# RPMB
+/dev/block/mmcblk0rpmb    0660   root       system
+
+# FireOS
+/dev/metrics              0440   root       log
+/dev/vitals               0440   root       log
+
+# USB camera
+/dev/video0               0666   system     camera
+/dev/video1               0666   system     camera
+/dev/video2               0666   system     camera
+
+# Thermal
+/sys/devices/virtual/thermal/thermal_zone* mode 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* temp 0664 system system
+/sys/devices/virtual/thermal/thermal_zone* policy 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trips 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* type 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* uevent 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* passive 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* policy 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* polling 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* power 0660 system system
+/sys/devices/virtual/thermal/cooling_device* cur_state 0660 system system
+/sys/devices/virtual/thermal/cooling_device* max_state 0660 system system
+/sys/devices/virtual/thermal/cooling_device* power 0660 system system
+/sys/devices/virtual/thermal/cooling_device* type 0660 system system
+/sys/devices/virtual/thermal/cooling_device* levels 0660 system system
+/sys/devices/virtual/thermal/cooling_device* uevent 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_0_temp 0666 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_0_hyst 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_0_type 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_1_temp 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_1_hyst 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_1_type 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_2_temp 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_2_hyst 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_2_type 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_3_temp 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_3_hyst 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_3_type 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_4_temp 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_4_hyst 0660 system system
+/sys/devices/virtual/thermal/thermal_zone* trip_point_4_type 0660 system system

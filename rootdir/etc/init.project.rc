@@ -1,0 +1,177 @@
+# MTK project .rc configure
+
+import init.mt8695.usb.rc
+import init.whad_cc.rc
+
+on early-boot
+    start usb_cp_type
+
+#Insmod the Wifi Remote driver when Wifi P2P group is created
+on property:wlan.interface.p2p.group=*
+    start ozwpan
+
+on init
+    mount tmpfs tmpfs /mnt/media_rw/ mode=0755,uid=1000,gid=1000
+    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
+    mkdir /storage/usbotg 0700 root root
+    mount tmpfs tmpfs /storage/usbotg mode=0755,uid=1000,gid=1000
+    verity_load_state
+    export DOWNLOAD_CACHE /cache
+
+#dynamic_boost
+    chmod 0660 /sys/devices/platform/dynamic_boost/dynamic_boost
+    chown system system /sys/devices/platform/dynamic_boost/dynamic_boost
+
+on post-fs-data
+    start amzn_drmprov
+    setprop sys.usb.ffs.aio_compat 1
+    insmod /vendor/lib/modules/btmtksdio.ko
+    verity_update_state
+
+#SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+
+
+
+#Define device for ATCID
+    chmod 660 /dev/ttyGS0
+    chown system /dev/ttyGS0
+    chmod 660 /dev/ttyGS1
+    chown system /dev/ttyGS1
+
+
+    chmod 0660 /data/misc/wifi/p2p_supplicant.conf
+
+    # dhcp server
+    mkdir /data/misc/dhcp 0770 dhcp wifi
+    chown dhcp wifi /data/misc/dhcp
+
+    # Prealloc memory for wlan driver
+    insmod /vendor/lib/modules/wlan_mt76x3_sdio_prealloc.ko
+
+    # L wlan driver
+    insmod /vendor/lib/modules/wlan_mt76x3_sdio.ko
+
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+    # Disable suspend
+    write /sys/power/wake_lock disablesuspend
+
+#audio system init
+on post-fs-data
+    start audio_sys_init
+
+service audio_sys_init /system/bin/audio_sys_init.sh
+	disabled
+	user root
+	oneshot
+
+#boot complete
+on property:dev.bootcomplete=1
+    start boot_complete
+    write /proc/sys/vm/swappiness 100
+
+service boot_complete /system/bin/boot_complete.sh
+        disabled
+        user root
+        oneshot
+
+# query USB charge port type service
+service usb_cp_type /system/bin/amzn_usb_cp_type.sh
+	disabled
+	user root
+	oneshot
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+service ozwpan /system/bin/ozwpan.sh
+    disabled
+    oneshot
+    user root
+
+service atci_service /vendor/bin/atci_service
+	socket atci-service stream 660 radio system
+	socket atci-serv-fw stream 660 radio system
+	user root
+	disabled
+	group radio system
+service atcid-daemon-u /vendor/bin/atcid
+	user system
+	group radio system media
+	disabled
+	oneshot
+
+service atcid-daemon-e /vendor/bin/atcid
+	user root
+	group radio system
+	disabled
+	oneshot
+
+on early_property:ro.build.type=eng
+start atci_service
+start atcid-daemon-e
+service audio-daemon /vendor/bin/audiocmdservice_atci
+    class main
+    socket atci-audio stream 660 media system
+    user media
+    group nvram media system sdcard_rw
+    disabled
+    oneshot
+
+service thermal_qa /system/bin/ThermalBenchmarkAutomation.sh
+	class late_start
+	user root
+	group root
+	oneshot
+	disabled
+
+on property:debug.log.thermal_qa.enable=y
+	start thermal_qa
+
+service amzn_drmprov /system/bin/amzn_drmprov_check
+	class main
+	user root
+	group system drmrpc
+	oneshot
+	disabled
+
+service wipe_fosflags /init.fosflags.sh wipe
+	class core
+	oneshot
+	disabled
+
+service backup_drms /system/bin/amzn_drmprov_tool --backup
+	class main
+	user root
+	group system drmrpc
+	oneshot
+	disabled
+
+on property:amazon.fos_flags.wipe=1
+	start backup_drms
+	start wipe_fosflags
+
+# Set KSM parameters and enable it
+on property:sys.boot_completed=1
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 500
+    write /sys/kernel/mm/ksm/run 1
+
+# The following change requires that the corresponding change be made in the
+# device's system.prop file, and is required because "ip_local_reserved_ports"
+# is too long. Additional ephemeral port reservations should be added to the
+# ip_loc_res_ports var in the system.prop
+on property:sys.sysctl.ip_loc_res_ports=*
+    write /proc/sys/net/ipv4/ip_local_reserved_ports ${sys.sysctl.ip_loc_res_ports}
