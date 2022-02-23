@@ -86,6 +86,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    libtinyxml \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.soundtrigger@2.1-impl
 
