@@ -31,7 +31,17 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.mt8695 \
-    fstab.mt8695_ramdisk
+    fstab.mt8695_ramdisk \
+    factory_init.project.rc \
+    factory_init.rc \
+    init.connectivity.rc \
+    init.mt8695.rc \
+    init.mt8695.usb.rc \
+    init.project.rc \
+    init.nvdata.rc \
+    meta_init.rc \
+    multi_init.rc \
+    ueventd.mtk.rc
 
 # Recovery
 PRODUCT_PACKAGES += \

@@ -1,0 +1,28 @@
+# import AOSP service related rc in meta mode and factory mode.
+#
+import /system/etc/init/aee_aed.rc
+import /system/etc/init/aee_aed64.rc
+import /vendor/etc/init/aee_aedv.rc
+import /vendor/etc/init/aee_aedv64.rc
+import /system/etc/init/logd.rc
+import /system/etc/init/logd_e.rc
+import /system/etc/init/logcatd.rc
+import /system/etc/init/vold.rc
+import /system/etc/init/storagemanagerd.rc
+import /system/etc/init/hwservicemanager.rc
+import /system/etc/init/servicemanager.rc
+import /system/etc/init/mobile_log_d.rc
+import /vendor/etc/init/storageproxyd.rc
+import /vendor/etc/init/android.hardware.keymaster@3.0-service.rc
+import /vendor/etc/init/vendor.mediatek.hardware.keyinstall@1.0-service.rc
+import /vendor/etc/init/vendor.mediatek.hardware.keymanage@1.0-service.rc
+import /vendor/etc/init/android.hardware.audio@4.0-service-mediatek.rc
+import /vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
+import /vendor/etc/init/android.hardware.nfc@1.1-service.rc
+import /vendor/etc/init/tee.rc
+import /vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
+import /vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc
+import /vendor/etc/init/merged_hal_service.rc
+import /system/etc/init/android.hidl.allocator@1.0-service.rc
+import /vendor/etc/init/vendor.microtrust.hardware.capi@2.0-service.rc
+
