@@ -1,0 +1,75 @@
+# HDMI
+ro.hdmi.wake_on_hotplug=false
+persist.sys.hdmi.keep_awake=false
+ro.vendor.mtk_tb_hdmi=internal,hidl,1080plimit
+
+# Display
+ro.amazon.sys.fbs-size=1920x1080
+ro.vendor.mtk_pq_support=2
+ro.vendor.mtk_pq_color_mode=1
+ro.vendor.dpframework.not_support_yv12=1
+debug.sf.disable_backpressure=1
+
+# Audio
+media.audio.hrt_freq=13000
+ro.vendor.mtk_audio_tuning_tool_ver=V2.2
+
+# Radio
+persist.radio.multisim.config=ss
+ro.vendor.mtk_protocol1_rat_config=no
+ro.vendor.num_md_protocol=2
+ro.telephony.default_network=0
+ro.vendor.md_prop_ver=1
+ro.vendor.mtk_world_phone_policy=0
+ro.vendor.mtk_external_sim_only_slots=0
+ro.vendor.sim_me_lock_mode=0
+persist.vendor.vilte_support=0
+persist.vendor.viwifi_support=0
+persist.service.acm.enable=0
+
+# Wi-Fi
+wifi.interface=wlan0
+ro.vendor.ap_info_monitor=0
+
+# ADB
+service.adb.tcp.port=5555
+
+# DRM
+drm.service.enabled=true
+ro.vendor.mtk_in_house_tee_support=true
+ro.vendor.mtk_widevine_drm_l1_support=1
+vendor.mtk.vdec.waitkeyframeforplay=1
+ro.vendor.mtk_hybrid_encode_support=true
+
+# MediaTek
+Build.BRAND=MTK
+ro.vendor.mediatek.platform=MT8695
+ro.vendor.mediatek.version.branch=alps-mp-p0.mp8.tc6sp
+ro.vendor.mediatek.version.release=alps-mp-p0.mp8.tc6sp-of.p66
+
+# Camera
+vendor.camera.mdp.dre.enable=0
+vendor.camera.mdp.cz.enable=0
+
+# GPS
+ro.vendor.mtk_gps_support=0+
+
+# Storage
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mtk_f2fs_enable=0
+ro.crypto.volume.filenames_mode=aes-256-cts
+
+# WFD
+ro.vendor.mtk_wfd_support=1
+ro.vendor.wfd.dummy.enable=1
+ro.vendor.wfd.iframesize.level=0
+ro.vendor.mtk_sec_video_path_support=1
+persist.vendor.radio.mtk_ps2_rat=G
+
+# Log
+persist.log.tag.RILMUXD=I
+persist.log.tag.DCT=D
+ro.vendor.mtk_log_hide_gps=1
+persist.log.tag.CdmaMoSms=I
+persist.log.tag.CdmaMtSms=I
+debug.log.thermal_qa.enable=n
