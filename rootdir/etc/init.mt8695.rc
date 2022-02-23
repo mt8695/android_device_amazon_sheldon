@@ -8,7 +8,7 @@ import /vendor/etc/init/hw/init.aee.rc
 import /system/etc/init/hw/init.aee.rc
 #import ${ro.vendor.rc}init.volte.rc
 #import ${ro.vendor.rc}init.mal.rc
-import ${ro.vendor.rc}init.nvdata.rc
+import /vendor/etc/init/hw/init.nvdata.rc
 #import ${ro.vendor.rc}init.sensor_1_0.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
