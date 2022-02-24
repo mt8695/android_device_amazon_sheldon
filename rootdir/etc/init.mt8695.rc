@@ -220,7 +220,6 @@ on post-fs-data
 
     # M4U
     #insmod /vendor/lib/modules/m4u.ko
-    #mknod /dev/M4U_device c 188 0
     chmod 0444 /dev/m4u
     #chown system media /dev/M4U_device
 
@@ -237,16 +236,13 @@ on post-fs-data
 
     #VideoCodec
     #insmod /vendor/lib/modules/vcodec_kernel_driver.ko
-    mknod /dev/Vcodec c 160 0
     chmod 0660 /dev/Vcodec
     chown media system /dev/Vcodec
-    mknod /dev/Vcodec1 c 161 0
     chmod 0660 /dev/Vcodec1
     chown media system /dev/Vcodec1
 	
     #MJC
     #insmod /vendor/lib/modules/mjc_kernel_driver.ko
-    #mknod /dev/MJC c 168 0
     chmod 0660 /dev/MJC
     chown media system /dev/MJC
 
@@ -361,14 +357,12 @@ on post-fs-data
     chown root system /dev/sec
 
     # FM Radio device node
-    mknod /dev/fm     c 193 0;
     chmod 0660 /dev/fm
     chown media media /dev/fm
 
     # device apc settings
 
     # device info /proc interface
-    mknod /dev/devmap c 196 0;
     chmod 0444 /dev/devmap
     chown root media /dev/devmap
 
