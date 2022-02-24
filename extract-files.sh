@@ -63,6 +63,9 @@ function blob_fixup() {
     	vendor/lib/libnvram.so)
             "${PATCHELF}" --add-needed "libshim_nvram.so" "${2}"
             ;;
+        vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek)
+            "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
+            ;;
     esac
 }
 

@@ -185,7 +185,7 @@ vendor/etc/init/securetime.rc
 
 # Wi-Fi
 vendor/bin/iwpriv
-vendor/lib/libwifi-hal.so
+vendor/lib/libwifi-hal.so:vendor/lib/libwifi-hal-mtk.so
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/etc/init/android.hardware.wifi@1.0-service-mediatek.rc
 vendor/bin/hw/fireos.hardware.connectivity.networkpower@1.0-service
