@@ -1,0 +1,6 @@
+cc_library_shared {
+        name: "libshim_nvram",
+        srcs: ["libshim_nvram.cpp"],
+        shared_libs: ["libbase"],
+        proprietary: true,
+}
