@@ -29,6 +29,10 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# RRO
+PRODUCT_PACKAGES += \
+    WifiOverlay
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
