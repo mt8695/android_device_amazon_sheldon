@@ -96,8 +96,12 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     libtinyxml \
+    android.hardware.audio.service \
+    android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
-    android.hardware.soundtrigger@2.1-impl
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
+    libaudiopreprocessing
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
