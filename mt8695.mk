@@ -24,6 +24,11 @@ COMMON_PATH := device/amazon/mt8695-common
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(COMMON_PATH)/overlay
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
