@@ -204,16 +204,6 @@
         <fqname>@1.0::IAmazonThermal/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>fireos.hardware.audio</name>
-        <transport>hwbinder</transport>
-        <version>4.0</version>
-        <interface>
-            <name>IDevicesFactory</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@4.0::IDevicesFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>fireos.hardware.avsync</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

@@ -16,14 +16,6 @@ vendor/etc/init/init.wipe_fos_flags.rc
 vendor/etc/init/pr_device_cert_id.rc
 
 # Audio
-vendor/bin/hw/fireos.hardware.audio@2.0-service
-vendor/etc/init/fireos.hardware.audio@2.0-service.rc
-vendor/lib/fireos.hardware.audio@2.0.so
-vendor/lib/fireos.hardware.audio@4.0.so
-vendor/lib/fireos.hardware.audiosignalprocessor@1.0.so
-vendor/lib/fireos.hardware.audiosignalprocessor@1.1.so
-vendor/lib/hw/fireos.hardware.audio@4.0-impl.so
-vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib/hw/audio.primary.mt8695.so
 vendor/lib/hw/audio.r_submix.mt8695.so
 vendor/lib/liblatencybenchmarker_interface.so
@@ -35,7 +27,6 @@ vendor/lib/libblisrc32_vendor.so
 vendor/lib/libalsautils.so
 vendor/lib/libaudiocomponentengine_vendor.so
 vendor/lib/libmtklimiter_vendor.so
-vendor/lib/soundfx/libaudiopreprocessing.so
 
 # Bluetooth
 vendor/bin/btmac
