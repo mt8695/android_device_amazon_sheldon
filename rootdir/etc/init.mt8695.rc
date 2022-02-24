@@ -124,6 +124,9 @@ on post-fs
     chmod 0770 /protect_s
 	
 on post-fs-data
+    # Stop the console notification
+	stop console
+
     start devcfg
     chown system system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
