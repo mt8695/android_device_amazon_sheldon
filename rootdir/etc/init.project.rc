@@ -15,7 +15,6 @@ on init
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
     mkdir /storage/usbotg 0700 root root
     mount tmpfs tmpfs /storage/usbotg mode=0755,uid=1000,gid=1000
-    verity_load_state
     export DOWNLOAD_CACHE /cache
 
 #dynamic_boost
@@ -119,9 +118,6 @@ service atcid-daemon-e /vendor/bin/atcid
 	disabled
 	oneshot
 
-on early_property:ro.build.type=eng
-start atci_service
-start atcid-daemon-e
 service audio-daemon /vendor/bin/audiocmdservice_atci
     class main
     socket atci-audio stream 660 media system
