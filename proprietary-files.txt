@@ -24,7 +24,6 @@ vendor/lib/libmediaextension_vendor.so
 vendor/lib/liblatencybenchmarker_vendor.so
 vendor/lib/libaudiohalopen_vendor.so
 vendor/lib/libblisrc32_vendor.so
-vendor/lib/libalsautils.so
 vendor/lib/libaudiocomponentengine_vendor.so
 vendor/lib/libmtklimiter_vendor.so
 
