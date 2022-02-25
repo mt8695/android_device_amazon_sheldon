@@ -102,6 +102,8 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     libtinyxml \
+    libalsautils \
+    libnbaio_mono \
     android.hardware.audio.service \
     android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
