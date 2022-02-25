@@ -72,6 +72,9 @@ function blob_fixup() {
         vendor/lib/libMtkOmxCore.so)
             "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
             ;;
+        vendor/lib/libMtkOmxVdecEx.so)
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
+            ;;
         vendor/lib/hw/audio.primary.mt8695.so)
             "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
             ;;
