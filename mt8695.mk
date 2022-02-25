@@ -44,7 +44,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl
 
 PRODUCT_PACKAGES += \
-    libion
+    libion \
+    libdrm.vendor
 
 # Ramdisk
 PRODUCT_PACKAGES += \
