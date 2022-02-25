@@ -72,7 +72,6 @@ vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so
 vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so
 vendor/lib/libIMGegl.so
 vendor/lib/libmemtrack_GL.so
-vendor/lib/libdrm.so
 vendor/lib/libavsync.so
 vendor/lib/libsrv_um.so
 vendor/lib/hw/vulkan.mt8695.so
