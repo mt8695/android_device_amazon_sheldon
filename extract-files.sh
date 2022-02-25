@@ -76,6 +76,8 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
             ;;
         vendor/lib/hw/audio.primary.mt8695.so)
+            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libxml2.so" "libxml2-v28.so" "${2}"
             "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
             ;;
     esac
