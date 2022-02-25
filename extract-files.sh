@@ -69,6 +69,12 @@ function blob_fixup() {
         vendor/lib/libladder.so)
             "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack_v28.so" "${2}"
             ;;
+        vendor/lib/libMtkOmxCore.so)
+            "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
+            ;;
+        vendor/lib/hw/audio.primary.mt8695.so)
+            "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
+            ;;
     esac
 }
 
