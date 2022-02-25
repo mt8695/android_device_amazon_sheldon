@@ -97,6 +97,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     libtinyxml \
+    libtinyalsa \
     libalsautils \
     libnbaio_mono \
     android.hardware.audio.service \
