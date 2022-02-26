@@ -183,7 +183,6 @@ vendor/etc/init/securetime.rc
 
 # Wi-Fi
 vendor/bin/iwpriv
-vendor/bin/hw/wpa_supplicant
 vendor/bin/hw/hostapd
 vendor/etc/init/hostapd.android.rc
 vendor/lib/libwpa_client.so
@@ -195,6 +194,9 @@ vendor/bin/hw/fireos.hardware.connectivity.networkpower@1.0-service
 vendor/etc/init/fireos.hardware.connectivity.networkpower@1.0-service.rc
 vendor/lib/fireos.hardware.connectivity.networkpower@1.0.so
 vendor/lib/fireos.hardware.connectivity@1.0.so
+
+# WPA - from maverick - maverick-user 7.0 PS7312 1271 amz-p,release-keys
+vendor/bin/hw/wpa_supplicant|6fc8170c0469764a0860189a79aff9a3dde0c54e
 
 # Firmware
 vendor/firmware/bt.cfg
