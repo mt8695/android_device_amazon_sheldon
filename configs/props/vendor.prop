@@ -16,6 +16,7 @@ ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 
 # Media
 debug.stagefright.ccodec=0
+media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Radio
 persist.radio.multisim.config=ss
