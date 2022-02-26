@@ -127,6 +127,8 @@ on post-fs-data
     # Stop the console notification
 	stop console
 
+    insmod /vendor/lib/modules/hid_ftv_bleremote.ko
+
     start devcfg
     chown system system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
