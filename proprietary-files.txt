@@ -185,6 +185,9 @@ vendor/etc/init/securetime.rc
 vendor/bin/iwpriv
 vendor/bin/hw/wpa_supplicant
 vendor/bin/hw/hostapd
+vendor/etc/init/hostapd.android.rc
+vendor/lib/libwpa_client.so
+vendor/bin/hostapd_cli
 vendor/lib/libwifi-hal.so:vendor/lib/libwifi-hal-mtk.so
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/etc/init/android.hardware.wifi@1.0-service-mediatek.rc
