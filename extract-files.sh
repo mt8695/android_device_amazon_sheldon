@@ -80,6 +80,9 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libxml2.so" "libxml2-v28.so" "${2}"
             "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
             ;;
+        vendor/lib/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v28.so" "${2}"
+            ;;
     esac
 }
 
