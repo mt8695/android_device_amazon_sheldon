@@ -18,5 +18,5 @@
 /dev/block/platform/soc/11230000.mmc/by-name/MISC          /misc           emmc  defaults defaults
 /dev/block/platform/soc/11230000.mmc/by-name/tee1          /tee1           emmc  defaults defaults
 /dev/block/platform/soc/11230000.mmc/by-name/tee2          /tee2           emmc  defaults defaults
-# Add for zram. zramsize can be in numeric (byte) , in percent or auto (detect by the system)
-/dev/block/zram0     /swap_zram0             swap      defaults                             wait,zramsize=392216000
+
+/dev/block/zram0 none swap defaults zramsize=402653184

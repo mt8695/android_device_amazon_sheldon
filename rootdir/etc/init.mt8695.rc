@@ -81,7 +81,7 @@ on fs
     mount_all /vendor/etc/fstab.mt8695
     write /proc/bootprof "INIT:Mount_END"
     write /proc/sys/vm/page-cluster 0
-    swapon_all /fstab.enableswap
+    swapon_all /vendor/etc/fstab.mt8695
 
 on fs
 
