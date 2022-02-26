@@ -14,6 +14,9 @@ debug.sf.disable_backpressure=1
 media.audio.hrt_freq=13000
 ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 
+# Media
+debug.stagefright.ccodec=0
+
 # Radio
 persist.radio.multisim.config=ss
 ro.vendor.mtk_protocol1_rat_config=no
