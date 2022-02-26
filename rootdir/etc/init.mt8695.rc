@@ -444,7 +444,7 @@ on post-fs-data
     chown system media /dev/mtkg2d
 
     # SMI
-    chmod 0660 /dev/MTK_SMI
+    chmod 0666 /dev/MTK_SMI
     chown media media /dev/MTK_SMI
 
     #for eng mode
