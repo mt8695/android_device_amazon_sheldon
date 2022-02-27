@@ -30,9 +30,6 @@ vendor/lib/libmtklimiter_vendor.so
 # Bluetooth
 vendor/bin/btmac
 vendor/etc/init/btmac.rc
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
-vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
 vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbt-vendor.so
 
