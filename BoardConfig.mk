@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-COMMON_PATH := device/amazon/mt8695-common
+DEVICE_PATH := device/amazon/sheldon
 
 # Platform
 BOARD_VENDOR := amazon
@@ -21,7 +21,7 @@ TARGET_BOARD_PLATFORM := mt8695
 TARGET_BOARD_PLATFORM_GPU := ge8300-mp4
 
 # Soong
-PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Arch
 TARGET_ARCH := arm
@@ -61,6 +61,7 @@ BOARD_MKBOOTIMG_ARGS += --board ""
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/amazon/mt8695
+TARGET_KERNEL_CONFIG := sheldon_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 TARGET_KERNEL_CLANG_COMPILE := true
 NEED_KERNEL_MODULE_SYSTEM := true
@@ -95,16 +96,17 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Properties
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/props/system.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
 # Vintf
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/vintf/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
 # Recovery
+TARGET_OTA_ASSERT_DEVICE := sheldon,sheldonp
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.mt8695
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt8695
 
 # SPL
 VENDOR_SECURITY_PATCH := 2018-10-05
