@@ -29,6 +29,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Properties
+-include $(COMMON_PATH)/configs/props/logging_props.mk
+
 # RRO
 PRODUCT_PACKAGES += \
     WifiOverlay
