@@ -116,3 +116,13 @@ ro.fos.gralloc.flags=0x00000200
 # Enable AVRCP volume control
 # used across FOS versions, need to enforce a 31-character length limit
 persist.bluetooth.avrcpvolctrl=true
+
+# ART
+dalvik.vm.image-dex2oat-filter=quicken
+dalvik.vm.image-dex2oat-threads=4
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3
+dalvik.vm.dex2oat-filter=quicken
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.dex2oat-cpu-set=0,1,2,3
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3
