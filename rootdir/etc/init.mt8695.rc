@@ -475,8 +475,8 @@ on post-fs-data
     chmod 0660 /mtd@misc
     chown root system /mtd@misc
 
-    chmod 0664 /sys/bus/platform/drivers/mem_bw_ctrl/concurrency_scenario
-    chown media media /sys/bus/platform/drivers/mem_bw_ctrl/concurrency_scenario
+    chmod 0666 /sys/bus/platform/drivers/mem_bw_ctrl/concurrency_scenario
+    chown system media /sys/bus/platform/drivers/mem_bw_ctrl/concurrency_scenario
 
     chmod 0664 /proc/mtk-gpu/bw_ultra
     chown media media /proc/mtk-gpu/bw_ultra	
