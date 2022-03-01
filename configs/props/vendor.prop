@@ -18,6 +18,26 @@ ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 debug.stagefright.ccodec=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
+# Android OpenGL renderer configuration
+# Configure as if we're a 1080p 1GB device
+# (we can consider Mantis Tank + .5GB for 4k)
+ro.hwui.texture_cache_size=48.0
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.layer_cache_size=32.0
+ro.hwui.drop_shadow_cache_size=4.0
+ro.hwui.path_cache_size=16.0
+ro.hwui.r_buffer_cache_size=4.0
+ro.hwui.text_small_cache_height=512
+
+# Dalvik
+dalvik.vm.skpheapgrowthlimit=20m
+dalvik.vm.skpheapmaxfree=512k
+dalvik.vm.skpheapminfree=128k
+dalvik.vm.skpheapstartsize=2m
+dalvik.vm.skpheaptargetutil=0.95
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=256m
+
 # Netflix
 ro.vendor.nrdp.audio.mixer.buffersize=2048
 ro.vendor.nrdp.modelgroup=FIRETVSTICK2020
