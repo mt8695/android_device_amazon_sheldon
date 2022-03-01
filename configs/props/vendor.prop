@@ -18,6 +18,11 @@ ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 debug.stagefright.ccodec=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
+# Netflix
+ro.vendor.nrdp.audio.mixer.buffersize=2048
+ro.vendor.nrdp.modelgroup=FIRETVSTICK2020
+ro.vendor.nrdp.validation=ninja_7
+
 # Radio
 persist.radio.multisim.config=ss
 ro.vendor.mtk_protocol1_rat_config=no
