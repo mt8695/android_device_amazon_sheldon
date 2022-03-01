@@ -61,12 +61,6 @@ audio.af.min.normalsink.bufsize.ms=16
 # of waiting for half of the shared buffer to become free
 audio.af.enable.cblk.write.delay.optimization=true
 
-# This is very specific to the Netflix app and enforce it to queue buffers
-# (of size set below in frames) to the Open SL ES Player.
-# 2048 frames to ensure enough data available for AudioFlinger MixerThread to
-# produce a buffer (which is equivalent to HAL buffer size i.e. 32ms = 1536 frames).
-ro.vendor.nrdp.audio.mixer.buffersize=2048
-
 ro.kernel.zio=38,108,105,16
 
 ro.sf.lcd_density=320
