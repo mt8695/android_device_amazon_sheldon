@@ -19,4 +19,4 @@
 /dev/block/platform/soc/11230000.mmc/by-name/tee1          /tee1           emmc  defaults defaults
 /dev/block/platform/soc/11230000.mmc/by-name/tee2          /tee2           emmc  defaults defaults
 
-/dev/block/zram0 none swap defaults zramsize=402653184
+/dev/block/zram0 none swap defaults zramsize=402653184,max_comp_streams=4
