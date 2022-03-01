@@ -20,9 +20,6 @@ $(call inherit-product, device/google/atv/products/atv_base.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 
-# Inherit Dalvik heap props for a 1024MB "tablet"
-$(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
-
 # Inherit from sheldon device
 $(call inherit-product, device/amazon/sheldon/device.mk)
 
