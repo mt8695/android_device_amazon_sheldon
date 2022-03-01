@@ -216,3 +216,32 @@ vendor/lib/modules/btmtksdio.ko
 vendor/lib/modules/hid_ftv_bleremote.ko
 vendor/lib/modules/wlan_mt76x3_sdio.ko
 vendor/lib/modules/wlan_mt76x3_sdio_prealloc.ko
+
+# Keylayout - from sheldonp - sheldonp-user 7.0 PS7249 2719 amz-p,release-keys
+usr/keylayout/Vendor_0111_Product_1431.kl:vendor/usr/keylayout/Vendor_0111_Product_1431.kl
+usr/keylayout/Vendor_0171_Product_0412.kl:vendor/usr/keylayout/Vendor_0171_Product_0412.kl
+usr/keylayout/Vendor_0171_Product_0413.kl:vendor/usr/keylayout/Vendor_0171_Product_0413.kl
+usr/keylayout/Vendor_0171_Product_0414.kl:vendor/usr/keylayout/Vendor_0171_Product_0414.kl
+usr/keylayout/Vendor_0171_Product_0415.kl:vendor/usr/keylayout/Vendor_0171_Product_0415.kl
+usr/keylayout/Vendor_0171_Product_0418.kl:vendor/usr/keylayout/Vendor_0171_Product_0418.kl
+usr/keylayout/Vendor_0171_Product_0419.kl:vendor/usr/keylayout/Vendor_0171_Product_0419.kl
+usr/keylayout/Vendor_0171_Product_041c.kl:vendor/usr/keylayout/Vendor_0171_Product_041c.kl
+usr/keylayout/Vendor_0171_Product_041e.kl:vendor/usr/keylayout/Vendor_0171_Product_041e.kl
+usr/keylayout/Vendor_0171_Product_041f.kl:vendor/usr/keylayout/Vendor_0171_Product_041f.kl
+usr/keylayout/Vendor_0171_Product_0420.kl:vendor/usr/keylayout/Vendor_0171_Product_0420.kl
+usr/keylayout/Vendor_0171_Product_0421.kl:vendor/usr/keylayout/Vendor_0171_Product_0421.kl
+usr/keylayout/Vendor_045e_Product_0291.kl:vendor/usr/keylayout/Vendor_045e_Product_0291.kl
+usr/keylayout/Vendor_054c_Product_05c4.kl:vendor/usr/keylayout/Vendor_054c_Product_05c4.kl
+usr/keylayout/Vendor_057e_Product_2009.kl:vendor/usr/keylayout/Vendor_057e_Product_2009.kl
+usr/keylayout/Vendor_1949_Product_0401.kl:vendor/usr/keylayout/Vendor_1949_Product_0401.kl
+usr/keylayout/Vendor_1949_Product_0402.kl:vendor/usr/keylayout/Vendor_1949_Product_0402.kl
+usr/keylayout/Vendor_1949_Product_0404.kl:vendor/usr/keylayout/Vendor_1949_Product_0404.kl
+usr/keylayout/Vendor_1949_Product_0406.kl:vendor/usr/keylayout/Vendor_1949_Product_0406.kl
+usr/keylayout/Vendor_1949_Product_0407.kl:vendor/usr/keylayout/Vendor_1949_Product_0407.kl
+usr/keylayout/Vendor_1949_Product_0419.kl:vendor/usr/keylayout/Vendor_1949_Product_0419.kl
+usr/keylayout/Vendor_20a0_Product_0004.kl:vendor/usr/keylayout/Vendor_20a0_Product_0004.kl
+usr/keylayout/amzkeyboard.kl:vendor/usr/keylayout/amzkeyboard.kl
+usr/keylayout/lightning-device.kl:vendor/usr/keylayout/lightning-device.kl
+
+# IDC - from sheldonp - sheldonp-user 7.0 PS7249 2719 amz-p,release-keys
+usr/idc/amazon_touch.idc:vendor/usr/idc/amazon_touch.idc
