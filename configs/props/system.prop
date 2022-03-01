@@ -130,3 +130,8 @@ dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3
 # OMX
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
