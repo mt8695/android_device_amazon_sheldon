@@ -111,5 +111,8 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt8695
 # SPL
 VENDOR_SECURITY_PATCH := 2018-10-05
 
+# SEPolicy
+include device/mediatek/sepolicy/sepolicy.mk
+
 # VNDK
 BOARD_VNDK_VERSION := current
