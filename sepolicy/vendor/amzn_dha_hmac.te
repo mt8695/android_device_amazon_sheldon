@@ -1,0 +1,7 @@
+type amzn_dha_hmac_exec, exec_type, file_type, vendor_file_type;
+type amzn_dha_hmac ,domain;
+init_daemon_domain(amzn_dha_hmac)
+
+# TEE
+allow amzn_dha_hmac vendor_file:dir { read open ioctl getattr };
+allow amzn_dha_hmac trustzone_device:chr_file { read write open ioctl getattr };

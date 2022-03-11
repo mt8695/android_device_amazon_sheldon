@@ -1,0 +1,8 @@
+type amzn_drmprov_check_exec, exec_type, file_type, vendor_file_type;
+type amzn_drmprov_check ,domain;
+init_daemon_domain(amzn_drmprov_check)
+
+# TEE
+allow amzn_drmprov_check trustzone_device:chr_file { read write open ioctl getattr };
+allow amzn_drmprov_check vendor_file:dir { read open ioctl getattr };
+allow amzn_drmprov_check kisd:unix_stream_socket connectto;

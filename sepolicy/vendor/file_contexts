@@ -1,2 +1,22 @@
 # TEE
 /dev/trustzone   u:object_r:trustzone_device:s0
+
+# Bluetooth
+/(system|system\/vendor|vendor)/bin/btmac                 u:object_r:hal_bluetooth_default_exec:s0
+
+# DRM (Amazon)
+/(system|system\/vendor|vendor)/bin/amzn_dha_tool         u:object_r:amzn_dha_tool_exec:s0
+/(system|system\/vendor|vendor)/bin/amzn_xo_tool          u:object_r:amzn_xo_tool_exec:s0
+/(system|system\/vendor|vendor)/bin/amzn_dha_hmac         u:object_r:amzn_dha_hmac_exec:s0
+/(system|system\/vendor|vendor)/bin/amzn_drmprov_check    u:object_r:amzn_drmprov_check_exec:s0
+/(system|system\/vendor|vendor)/bin/amzn_drmprov_tool     u:object_r:amzn_drmprov_tool_exec:s0
+/(system|system\/vendor|vendor)/bin/pr_device_cert_id     u:object_r:pr_device_cert_id_exec:s0
+/(system|system\/vendor|vendor)/bin/rpmb_svc              u:object_r:tee_exec:s0
+/(system|system\/vendor|vendor)/bin/securetime            u:object_r:mt_securetime_exec:s0
+
+# FireOS
+/(system|system\/vendor|vendor)/bin/hw/fireos\.hardware\.amazonthermal@1\.0-service                   u:object_r:hal_amzn_thermal_default_exec:s0
+/(system|system\/vendor|vendor)/bin/hw/fireos\.hardware\.connectivity.networkpower@1\.0-service       u:object_r:hal_amzn_networkpower_default_exec:s0
+/(system|system\/vendor|vendor)/bin/hw/fireos\.hardware\.hdcp@1\.0-service                            u:object_r:hal_amzn_hdcp_default_exec:s0
+/(system|system\/vendor|vendor)/bin/hw/fireos\.hardware\.hdmitxinfo@1\.0-service                      u:object_r:hal_amzn_hdmitxinfo_default_exec:s0
+/(system|system\/vendor|vendor)/bin/hw/fireos\.hardware\.idme@1\.0-service                            u:object_r:hal_amzn_idme_default_exec:s0

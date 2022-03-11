@@ -1,0 +1,3 @@
+type mt_securetime_exec, exec_type, file_type, vendor_file_type;
+type mt_securetime ,domain;
+init_daemon_domain(mt_securetime)
