@@ -1,0 +1,2 @@
+# TEE
+/dev/trustzone   u:object_r:trustzone_device:s0
