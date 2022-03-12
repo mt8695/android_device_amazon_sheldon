@@ -6,10 +6,6 @@ import init.whad_cc.rc
 on early-boot
     start usb_cp_type
 
-#Insmod the Wifi Remote driver when Wifi P2P group is created
-on property:wlan.interface.p2p.group=*
-    start ozwpan
-
 on init
     mount tmpfs tmpfs /mnt/media_rw/ mode=0755,uid=1000,gid=1000
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
@@ -94,11 +90,6 @@ service usb_cp_type /system/bin/amzn_usb_cp_type.sh
 service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
     class late_start
     disabled
-
-service ozwpan /system/bin/ozwpan.sh
-    disabled
-    oneshot
-    user root
 
 service atci_service /vendor/bin/atci_service
 	socket atci-service stream 660 radio system
