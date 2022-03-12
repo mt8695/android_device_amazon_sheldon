@@ -2,3 +2,7 @@ type hal_amzn_thermal_default_exec, exec_type, file_type, vendor_file_type;
 type hal_amzn_thermal_default ,domain;
 binder_call(hwservicemanager, hal_amzn_thermal_default)
 init_daemon_domain(hal_amzn_thermal_default)
+
+# Thermal
+allow hal_amzn_thermal_default sysfs_therm:dir r_dir_perms;
+allow hal_amzn_thermal_default sysfs_therm:file rw_file_perms;
