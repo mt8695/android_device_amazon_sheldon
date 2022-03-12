@@ -180,6 +180,7 @@ PRODUCT_COPY_FILES += \
 
 # Netflix
 PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/permissions/netflix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/netflix.xml \
     $(DEVICE_PATH)/configs/permissions/nrdp.modelgroup.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/nrdp.modelgroup.xml
 
 # Shims
