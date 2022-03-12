@@ -44,7 +44,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # RRO
 PRODUCT_PACKAGES += \
-    WifiOverlay
+    WifiOverlay \
+    NetflixConfigOverlay
 
 # Graphics
 PRODUCT_PACKAGES += \

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nrdp_platform_capabilities_overlay">{\"vp9Disabled\": \"false\", \"hdrOutputType\": \"always\"}</string>
+</resources>

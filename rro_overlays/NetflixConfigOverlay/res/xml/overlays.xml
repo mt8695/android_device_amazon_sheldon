@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<overlay xmlns:android="http://schemas.android.com/apk/res/android">
+    <item target="string/nrdp_platform_capabilities" value="@string/nrdp_platform_capabilities_overlay" />
+</overlay>

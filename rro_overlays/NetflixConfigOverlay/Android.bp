@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "NetflixConfigOverlay",
+    resource_dirs: ["res"],
+    sdk_version: "current",
+    proprietary: true
+}
