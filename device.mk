@@ -180,6 +180,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Netflix
+PRODUCT_PACKAGES += \
+    NetflixConfig
+
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/netflix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/netflix.xml \
     $(DEVICE_PATH)/configs/permissions/nrdp.modelgroup.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/nrdp.modelgroup.xml
