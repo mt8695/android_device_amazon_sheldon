@@ -1,0 +1,38 @@
+# Copyright 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# BLE Remotes KeyLayout File
+#
+
+key 96    DPAD_CENTER
+key 103   DPAD_UP
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 108   DPAD_DOWN
+key 113   VOLUME_MUTE
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+key 116   POWER
+key 172   HOME
+key 217   SEARCH
+key 158   BACK
+key 139   MENU
+key 168   MEDIA_REWIND
+key 208   MEDIA_FAST_FORWARD
+key 164   MEDIA_PLAY_PAUSE
+
+# App Keys
+key 249   BUTTON_1
+key 250   BUTTON_2
+key 251   BUTTON_3
+key 252   CEC_POWER
+key 253   BUTTON_4
+key 362   TV
+
+key 582   VOICE_CMD
+key 372   ZOOM
+
+key 744   BUTTON_1
+key 745   BUTTON_2
+key 746   BUTTON_3
+key 747   BUTTON_4
+

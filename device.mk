@@ -187,6 +187,16 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/netflix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/netflix.xml \
     $(DEVICE_PATH)/configs/permissions/nrdp.modelgroup.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/nrdp.modelgroup.xml
 
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041c.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041c.kl \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e.kl \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0412.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0412.kl \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0414.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0414.kl \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0415.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0415.kl \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0418.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0418.kl \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041f.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041f.kl
+
 # Shims
 PRODUCT_PACKAGES += \
     libshim_nvram \

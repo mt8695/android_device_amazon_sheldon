@@ -1,0 +1,30 @@
+# Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# BLE Howard Remotes KeyLayout File
+#
+# This file is based on Howard_remote_specification_V0p1
+
+key 217   SEARCH
+
+key 96    DPAD_CENTER
+key 103   DPAD_UP
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 108   DPAD_DOWN
+
+key 172   HOME
+key 158   BACK
+key 139   MENU
+
+key 168   MEDIA_REWIND
+key 208   MEDIA_FAST_FORWARD
+key 164   MEDIA_PLAY_PAUSE
+
+key 362   TV
+key 748   F9
+
+# App Keys
+key 744   BUTTON_1
+key 745   BUTTON_2
+key 746   BUTTON_3
+key 747   BUTTON_4

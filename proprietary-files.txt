@@ -219,15 +219,8 @@ vendor/lib/modules/wlan_mt76x3_sdio_prealloc.ko
 
 # Keylayout - from sheldonp - sheldonp-user 7.0 PS7249 2719 amz-p,release-keys
 usr/keylayout/Vendor_0111_Product_1431.kl:vendor/usr/keylayout/Vendor_0111_Product_1431.kl
-usr/keylayout/Vendor_0171_Product_0412.kl:vendor/usr/keylayout/Vendor_0171_Product_0412.kl
 usr/keylayout/Vendor_0171_Product_0413.kl:vendor/usr/keylayout/Vendor_0171_Product_0413.kl
-usr/keylayout/Vendor_0171_Product_0414.kl:vendor/usr/keylayout/Vendor_0171_Product_0414.kl
-usr/keylayout/Vendor_0171_Product_0415.kl:vendor/usr/keylayout/Vendor_0171_Product_0415.kl
-usr/keylayout/Vendor_0171_Product_0418.kl:vendor/usr/keylayout/Vendor_0171_Product_0418.kl
 usr/keylayout/Vendor_0171_Product_0419.kl:vendor/usr/keylayout/Vendor_0171_Product_0419.kl
-usr/keylayout/Vendor_0171_Product_041c.kl:vendor/usr/keylayout/Vendor_0171_Product_041c.kl
-usr/keylayout/Vendor_0171_Product_041e.kl:vendor/usr/keylayout/Vendor_0171_Product_041e.kl
-usr/keylayout/Vendor_0171_Product_041f.kl:vendor/usr/keylayout/Vendor_0171_Product_041f.kl
 usr/keylayout/Vendor_0171_Product_0420.kl:vendor/usr/keylayout/Vendor_0171_Product_0420.kl
 usr/keylayout/Vendor_0171_Product_0421.kl:vendor/usr/keylayout/Vendor_0171_Product_0421.kl
 usr/keylayout/Vendor_045e_Product_0291.kl:vendor/usr/keylayout/Vendor_045e_Product_0291.kl
