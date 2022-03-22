@@ -1,5 +1,5 @@
 #
-# Vendor Blobs for mt8695-common - sheldon PS7249-2719
+# Vendor Blobs for mt8695-common - sheldonp PS7249-2719
 #
 
 # Amazon
@@ -221,16 +221,14 @@ vendor/firmware/woble_setting_7663.bin
 
 # Kernel Modules
 vendor/lib/modules/btmtksdio.ko
-vendor/lib/modules/hid_ftv_bleremote.ko
 vendor/lib/modules/wlan_mt76x3_sdio.ko
 vendor/lib/modules/wlan_mt76x3_sdio_prealloc.ko
+vendor/lib/modules/hid_ftv_bleremote.ko|cf6e28143204002fe0a54e44f71bf2e0d6ee7523
 
-# Keylayout - from sheldonp - sheldonp-user 7.0 PS7249 2719 amz-p,release-keys
+# Keylayout
 usr/keylayout/Vendor_0111_Product_1431.kl:vendor/usr/keylayout/Vendor_0111_Product_1431.kl
 usr/keylayout/Vendor_0171_Product_0413.kl:vendor/usr/keylayout/Vendor_0171_Product_0413.kl
 usr/keylayout/Vendor_0171_Product_0419.kl:vendor/usr/keylayout/Vendor_0171_Product_0419.kl
-usr/keylayout/Vendor_0171_Product_0420.kl:vendor/usr/keylayout/Vendor_0171_Product_0420.kl
-usr/keylayout/Vendor_0171_Product_0421.kl:vendor/usr/keylayout/Vendor_0171_Product_0421.kl
 usr/keylayout/Vendor_045e_Product_0291.kl:vendor/usr/keylayout/Vendor_045e_Product_0291.kl
 usr/keylayout/Vendor_054c_Product_05c4.kl:vendor/usr/keylayout/Vendor_054c_Product_05c4.kl
 usr/keylayout/Vendor_057e_Product_2009.kl:vendor/usr/keylayout/Vendor_057e_Product_2009.kl
@@ -244,5 +242,5 @@ usr/keylayout/Vendor_20a0_Product_0004.kl:vendor/usr/keylayout/Vendor_20a0_Produ
 usr/keylayout/amzkeyboard.kl:vendor/usr/keylayout/amzkeyboard.kl
 usr/keylayout/lightning-device.kl:vendor/usr/keylayout/lightning-device.kl
 
-# IDC - from sheldonp - sheldonp-user 7.0 PS7249 2719 amz-p,release-keys
+# IDC
 usr/idc/amazon_touch.idc:vendor/usr/idc/amazon_touch.idc
