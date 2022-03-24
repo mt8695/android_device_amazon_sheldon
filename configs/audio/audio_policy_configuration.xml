@@ -44,7 +44,6 @@
         <module name="primary" halVersion="2.0">
             <attachedDevices>
                 <item>Speaker</item>
-                <item>AVLS-In</item>
             </attachedDevices>
             <defaultOutputDevice>Speaker</defaultOutputDevice>
             <mixPorts>
@@ -71,14 +70,6 @@
                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
                 </mixPort>
-                <!-- For AVLS we need one profile that can be created by default and then dynamic channels -->
-                <mixPort name="avls_input" role="sink" maxActiveCount="0"> 
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="48000"
-                             channelMasks="AUDIO_CHANNEL_IN_AVLS_STEREO"/>
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="48000"/>
-                </mixPort>
             </mixPorts>
             <devicePorts>
                 <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
@@ -98,12 +89,6 @@
                 </devicePort>
                 <devicePort tagName="Wired-Headset-In" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
                 </devicePort>
-                <!-- For AVLS we need one profile that can be created by default and then dynamic channels -->
-                <devicePort tagName="AVLS-In" type="AUDIO_DEVICE_IN_AVLS" role="source">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                        samplingRates="48000" channelMasks="AUDIO_CHANNEL_IN_AVLS_STEREO"/>
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT" samplingRates="48000"/>
-                </devicePort>
             </devicePorts>
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
@@ -117,8 +102,6 @@
                        sources="bt_sco_out"/>
                 <route type="mix" sink="primary_input"
                        sources="Built-In-Mic,BT-SCO-Headset-In,Wired-Headset-In"/>
-                 <route type="mix" sink="avls_input"
-                       sources="AVLS-In"/>
             </routes>
 
         </module>
