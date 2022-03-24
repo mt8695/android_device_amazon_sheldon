@@ -212,6 +212,26 @@
         <fqname>@1.0::IAVSyncBridgeFactory/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>fireos.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <version>4.0</version>
+        <interface>
+            <name>IDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@4.0::IDevicesFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>fireos.hardware.audiosignalprocessor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IHalAudioSignalProcessor</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IHalAudioSignalProcessor/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>fireos.hardware.connectivity</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

@@ -114,8 +114,6 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libalsautils \
     libnbaio_mono \
-    android.hardware.audio.service \
-    android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.soundtrigger@2.1-impl \
