@@ -116,8 +116,6 @@ PRODUCT_PACKAGES += \
     libnbaio_mono \
     android.hardware.audio@2.0.vendor \
     android.hardware.audio@4.0.vendor \
-    android.hardware.audio.effect@4.0-impl \
-    android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.effect@2.0.vendor \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.soundtrigger@2.0.vendor \

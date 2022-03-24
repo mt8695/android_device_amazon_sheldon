@@ -20,6 +20,7 @@ vendor/bin/hw/fireos.hardware.audio@2.0-service
 vendor/etc/init/fireos.hardware.audio@2.0-service.rc
 vendor/lib/fireos.hardware.audio@2.0.so
 vendor/lib/fireos.hardware.audio@4.0.so
+vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib/fireos.hardware.audiosignalprocessor@1.0.so
 vendor/lib/fireos.hardware.audiosignalprocessor@1.1.so
 vendor/lib/hw/fireos.hardware.audio@4.0-impl.so

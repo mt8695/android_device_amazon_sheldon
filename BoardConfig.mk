@@ -15,6 +15,9 @@
 #
 DEVICE_PATH := device/amazon/sheldon
 
+# Broken rules
+BUILD_BROKEN_DUP_RULES := true
+
 # Platform
 BOARD_VENDOR := amazon
 TARGET_BOARD_PLATFORM := mt8695
