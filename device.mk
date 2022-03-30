@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.mt8695
+    fstab.mt8695 \
+    fstab.mt8695_ramdisk
 
 # Media
 PRODUCT_COPY_FILES += \
