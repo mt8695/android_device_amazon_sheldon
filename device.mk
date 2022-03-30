@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service \
     android.hardware.keymaster@3.0-impl
 
+PRODUCT_PACKAGES += \
+    libkeystore-engine-wifi-hidl \
+    libkeystore-wifi-hidl
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
