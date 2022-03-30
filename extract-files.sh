@@ -64,6 +64,10 @@ function blob_fixup() {
         vendor/lib/libMtkOmxVdecEx.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
             ;;
+        vendor/lib/hw/audio.primary.mt8695.so)
+            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libxml2.so" "libxml2-v28.so" "${2}"
+            ;;
         vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek)
             "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
             ;;
