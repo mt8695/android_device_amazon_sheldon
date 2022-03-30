@@ -93,6 +93,10 @@ TARGET_USES_HWC2 := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
+# Vintf
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := sheldon,sheldonp
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
