@@ -1,0 +1,126 @@
+rild.libpath=mtk-ril.so
+rild.libargs=-d /dev/ttyC0
+
+# MTK, Infinity, 20090720 {
+wifi.interface=wlan0
+# MTK, Infinity, 20090720 }
+
+# MTK, mtk03034, 20101210 {
+ro.mediatek.wlan.wsc=1
+# MTK, mtk03034 20101210}
+# MTK, mtk03034, 20110318 {
+ro.mediatek.wlan.p2p=1
+# MTK, mtk03034 20110318}
+
+# MTK, mtk03034, 20101213 {
+mediatek.wlan.ctia=0
+# MTK, mtk03034 20101213}
+
+
+#
+wifi.tethering.interface=ap0
+#
+
+# wifi rssi->bar thresholds
+persist.wifi.rssi.thresholds=-85,-80,-73,-69
+
+ro.opengles.version=196610
+
+wifi.direct.interface=p2p0
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=256m
+
+# USB MTP WHQL
+ro.sys.usb.mtp.whql.enable=0
+ro.vendor.usb.vid=0x1949
+
+# Power off opt in IPO
+sys.ipo.pwrdncap=2
+ro.sys.usb.storage.type=mtp
+
+# USB BICR function
+ro.sys.usb.bicr=no
+
+# USB Charge only function
+ro.sys.usb.charging.only=yes
+
+# audio
+ro.camera.sound.forced=0
+ro.audio.silent=0
+ro.mtk_box_audio_support=1
+ro.zygote.preload.enable=0
+# Use non-zero default volume for system stream to ensure audio is not muted
+# when boot animation starts before the AudioService (SystemServer) initializes
+ro.config.system_vol_default=7
+# Use this property to configure AudioFlinger to choose the Normal mixer path
+# when the HAL buffer size is more than or equal to the size mentioned
+audio.af.min.normalsink.bufsize.ms=16
+
+# When this is true, the AudioTrack::write() calls gets unblocked as soon as
+# there is sufficient space is available in the shared buffer (cblk) instead
+# of waiting for half of the shared buffer to become free
+audio.af.enable.cblk.write.delay.optimization=true
+
+# This is very specific to the Netflix app and enforce it to queue buffers
+# (of size set below in frames) to the Open SL ES Player.
+# 2048 frames to ensure enough data available for AudioFlinger MixerThread to
+# produce a buffer (which is equivalent to HAL buffer size i.e. 32ms = 1536 frames).
+ro.vendor.nrdp.audio.mixer.buffersize=2048
+
+ro.kernel.zio=38,108,105,16
+
+ro.sf.lcd_density=320
+
+# disable ipo for development
+sys.ipo.disable=1
+
+#for sw gpu alloc
+#ro.hardware.gralloc=mt8695.sw
+ro.mtk_alps_box_support=1
+# for ethernet extention
+ro.mtk_alps_ethernet_ext=1
+
+#add for 8695box cec device type
+ro.hdmi.device_type=4
+
+#add for 8695 DI
+ro.vendor.mtk.omx.vdec.di=1
+
+#add for svp
+ro.mtk_sec_video_path_support=1
+
+# max size(kb) of FDR whiltelist, 512MB
+ro.recovery.wl.maxstore=524288
+
+#Support storage visible to apps
+persist.fw.force_adoptable=true
+
+#Dynamic warming service
+persist.sys.ps.favapps_limit=2
+
+# enable offload mode for video
+audio.offload.video=true
+#set min duration as 1 sec for video in offload
+audio.offload.min.duration.secs=1
+
+# limit buffers for streaming apps
+ro.trim.buffers=1
+
+# PlayReady_3 DRM LPKB location
+ro.amzn_drm.pr3_file=/data/vendor/playready/AIVDrmStore
+
+# Reserve WHA server ports.
+sys.sysctl.ip_loc_res_ports=55442-55445
+
+# Do not turn BT off during WHA playback.
+persist.amzn.wha.bt_disable=false
+
+# MemAvailable threshold for TopAppKiller
+ro.mem.availmem_thres_kb=120000
+
+# gralloc optimization
+ro.fos.gralloc.flags=0x00000200
+
+# Enable AVRCP volume control
+# used across FOS versions, need to enforce a 31-character length limit
+persist.bluetooth.avrcpvolctrl=true

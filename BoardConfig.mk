@@ -89,6 +89,10 @@ TARGET_SCREEN_DENSITY := 320
 # Graphics
 TARGET_USES_HWC2 := true
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
+
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := sheldon,sheldonp
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
