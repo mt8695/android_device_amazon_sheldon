@@ -61,6 +61,9 @@ function blob_fixup() {
         vendor/lib/libladder.so)
             "${PATCHELF}" --add-needed "libshim_ladder.so" "${2}"
             ;;
+        vendor/lib/libMtkOmxVdecEx.so)
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
+            ;;
         vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek)
             "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
             ;;

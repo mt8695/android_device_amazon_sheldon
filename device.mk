@@ -178,5 +178,9 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhwbinder
 
+# VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v28/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v28.so
+
 # Proprietary
 $(call inherit-product-if-exists, vendor/amazon/sheldon/sheldon-vendor.mk)
