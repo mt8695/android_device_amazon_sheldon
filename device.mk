@@ -160,7 +160,8 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_nvram
+    libshim_nvram \
+    libshim_ladder
 
 # Binder
 PRODUCT_PACKAGES += \

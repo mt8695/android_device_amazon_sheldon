@@ -4,3 +4,9 @@ cc_library_shared {
         shared_libs: ["libbase"],
         proprietary: true,
 }
+
+cc_library_shared {
+        name: "libshim_ladder",
+        srcs: ["libshim_ladder.cpp"],
+        proprietary: true,
+}
