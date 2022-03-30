@@ -114,9 +114,13 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libalsautils \
     libnbaio_mono \
+    android.hardware.audio@2.0.vendor \
+    android.hardware.audio@4.0.vendor \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio.effect@2.0.vendor \
     android.hardware.soundtrigger@2.1-impl \
+    android.hardware.soundtrigger@2.0.vendor \
     libaudiopreprocessing \
     tinyplay \
     tinycap \
@@ -128,6 +132,12 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
     $(DEVICE_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(DEVICE_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.a2dp@1.0.vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
