@@ -75,6 +75,9 @@ function blob_fixup() {
         vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek)
             "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
             ;;
+        vendor/lib/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v28.so" "${2}"
+            ;;
     esac
 }
 
