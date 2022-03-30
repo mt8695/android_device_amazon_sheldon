@@ -56,4 +56,12 @@
          bucket, and scaled proportionally to the smaller buckets. 0 keeps the default.
          Below will adj 6 minfree buckets (in MB) to: 32, 40, 48, 56, 64, 80 -->
     <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">81920</integer>
+
+    <!-- The default value for transition animation scale found in developer settings.
+         1.0 corresponds to 1x animator scale, 0 means that there will be no transition
+         animations. Note that this is only a default and will be overridden by a
+         user-set value if toggled by settings so the "Transition animation scale" setting
+         should also be hidden if intended to be permanent. -->
+    <item name="config_appTransitionAnimationDurationScaleDefault" format="float" type="dimen">0.8</item>
+
 </resources>
