@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright (C) 2015 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<audioPolicyConfiguration version="1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- version section contains a “version” tag in the form “major.minor” e.g version=”1.0” -->
+
+    <!-- Global configuration Decalaration -->
+    <globalConfiguration speaker_drc_enabled="false"/>
+
+
+    <!-- Modules section:
+        There is one section per audio HW module present on the platform.
+        Each module section will contains two mandatory tags for audio HAL “halVersion” and “name”.
+        The module names are the same as in current .conf file:
+                “primary”, “A2DP”, “remote_submix”, “USB”
+        Each module will contain the following sections:
+        “devicePorts”: a list of device descriptors for all input and output devices accessible via this
+        module.
+        This contains both permanently attached devices and removable devices.
+        “mixPorts”: listing all output and input streams exposed by the audio HAL
+        “routes”: list of possible connections between input and output devices or between stream and
+        devices.
+            "route": is defined by an attribute:
+                -"type": <mux|mix> means all sources are mutual exclusive (mux) or can be mixed (mix)
+                -"sink": the sink involved in this route
+                -"sources": all the sources than can be connected to the sink via vis route
+        “attachedDevices”: permanently attached devices.
+        The attachedDevices section is a list of devices names. The names correspond to device names
+        defined in <devicePorts> section.
+        “defaultOutputDevice”: device to be used by default when no policy rule applies
+    -->
+    <modules>
+        <!-- Primary Audio HAL -->
+        <module name="primary" halVersion="2.0">
+            <attachedDevices>
+                <item>Speaker</item>
+                <item>AVLS-In</item>
+            </attachedDevices>
+            <defaultOutputDevice>Speaker</defaultOutputDevice>
+            <mixPorts>
+                <mixPort name="primary_out" role="source" flags="AUDIO_OUTPUT_FLAG_PRIMARY">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000,44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                <mixPort name="hdmi_passthrough_direct" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT">
+                    <profile name="" />
+                </mixPort>
+                <mixPort name="hdmi_hwsync_lpcm" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_HW_AV_SYNC">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                <mixPort name="hdmi_passthrough_tunnel" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_HW_AV_SYNC">
+                    <profile name="" />
+                </mixPort>
+                <mixPort name="bt_sco_out" role="source" flags="AUDIO_OUTPUT_FLAG_PRIMARY">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                        samplingRates="8000,16000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
+                </mixPort>
+                <mixPort name="primary_input" role="sink" maxActiveCount="0">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
+                </mixPort>
+                <!-- For AVLS we need one profile that can be created by default and then dynamic channels -->
+                <mixPort name="avls_input" role="sink" maxActiveCount="0"> 
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000"
+                             channelMasks="AUDIO_CHANNEL_IN_AVLS_STEREO"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000"/>
+                </mixPort>
+            </mixPorts>
+            <devicePorts>
+                <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
+                <devicePort tagName="HDMI-Out" type="AUDIO_DEVICE_OUT_AUX_DIGITAL" role="sink">
+                </devicePort>
+                <devicePort tagName="Speaker" type="AUDIO_DEVICE_OUT_SPEAKER" role="sink">
+                </devicePort>
+                <devicePort tagName="BT-SCO-Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_SCO" role="sink">
+                </devicePort>
+                <devicePort tagName="BT-SCO-Headset-Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET" role="sink">
+                </devicePort>
+                <devicePort tagName="Built-In-Mic" type="AUDIO_DEVICE_IN_BUILTIN_MIC" role="source">
+                </devicePort>
+                <devicePort tagName="BT-SCO-Headset-In" type="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                        samplingRates="8000,16000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
+                </devicePort>
+                <devicePort tagName="Wired-Headset-In" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
+                </devicePort>
+                <!-- For AVLS we need one profile that can be created by default and then dynamic channels -->
+                <devicePort tagName="AVLS-In" type="AUDIO_DEVICE_IN_AVLS" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                        samplingRates="48000" channelMasks="AUDIO_CHANNEL_IN_AVLS_STEREO"/>
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT" samplingRates="48000"/>
+                </devicePort>
+            </devicePorts>
+            <!-- route declaration, i.e. list all available sources for a given sink -->
+            <routes>
+                <route type="mix" sink="Speaker"
+                       sources="primary_out"/>
+                <route type="mix" sink="HDMI-Out"
+                       sources="primary_out,hdmi_passthrough_direct,hdmi_hwsync_lpcm,hdmi_passthrough_tunnel"/>
+                <route type="mix" sink="BT-SCO-Out"
+                       sources="bt_sco_out"/>
+                <route type="mix" sink="BT-SCO-Headset-Out"
+                       sources="bt_sco_out"/>
+                <route type="mix" sink="primary_input"
+                       sources="Built-In-Mic,BT-SCO-Headset-In,Wired-Headset-In"/>
+                 <route type="mix" sink="avls_input"
+                       sources="AVLS-In"/>
+            </routes>
+
+        </module>
+
+        <!-- A2dp Audio HAL -->
+        <module name="a2dp" halVersion="2.0">
+            <mixPorts>
+                <mixPort name="a2dp_out" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                         samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                <mixPort name="a2dp_tunnel_output" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_HW_AV_SYNC">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                         samplingRates="44100,48000"
+                         channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                <mixPort name="a2dp_in" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                         samplingRates="44100" channelMasks="AUDIO_CHANNEL_IN_STEREO"/>
+                </mixPort>
+            </mixPorts>
+            <devicePorts>
+                <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
+                <devicePort tagName="A2DP-Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink">
+                </devicePort>
+                <devicePort tagName="A2DP-Headphones-Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES" role="sink">
+                </devicePort>
+                <devicePort tagName="A2DP-Speaker-Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER" role="sink">
+                </devicePort>
+                <devicePort tagName="A2DP-In" type="AUDIO_DEVICE_IN_BLUETOOTH_A2DP" role="source">
+                </devicePort>
+            </devicePorts>
+            <!-- route declaration, i.e. list all available sources for a given sink -->
+            <routes>
+                <route type="mix" sink="A2DP-Out"
+                       sources="a2dp_out,a2dp_tunnel_output"/>
+                <route type="mix" sink="A2DP-Headphones-Out"
+                       sources="a2dp_out,a2dp_tunnel_output"/>
+                <route type="mix" sink="A2DP-Speaker-Out"
+                       sources="a2dp_out,a2dp_tunnel_output"/>
+                <route type="mix" sink="a2dp_in"
+                       sources="A2DP-In"/>
+            </routes>
+        </module>
+
+        <!-- AOSP USB Audio HAL -->
+        <xi:include href="usb_audio_policy_configuration.xml"/>
+
+        <!-- BTLE Remote Audio HAL -->
+        <module name="btle" halVersion="2.0">
+            <mixPorts>
+                <mixPort name="btle_in" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="16000" channelMasks="AUDIO_CHANNEL_IN_MONO"/>
+                </mixPort>
+            </mixPorts>
+            <devicePorts>
+                <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
+                <devicePort tagName="BTLE-In" type="AUDIO_DEVICE_IN_BLUETOOTH_BLE" role="source">
+                </devicePort>
+            </devicePorts>
+            <!-- route declaration, i.e. list all available sources for a given sink -->
+            <routes>
+                <route type="mix" sink="btle_in"
+                       sources="BTLE-In"/>
+            </routes>
+        </module>
+
+	<!-- STUB Audio HAL -->
+	<module name="stub" halVersion="2.0">
+	  <attachedDevices>
+	    <item>Default Out</item>
+	    <item>Default In</item>
+	  </attachedDevices>
+	  <defaultOutputDevice>Default Out</defaultOutputDevice>
+	  <mixPorts>
+	    <mixPort name="stub output" role="source" flags="AUDIO_OUTPUT_FLAG_PRIMARY">
+	      <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+		       samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+	    </mixPort>
+
+	    <mixPort name="stub input" role="sink">
+	      <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+		       samplingRates="48000" channelMasks="AUDIO_CHANNEL_IN_STEREO"/>
+	    </mixPort>
+	  </mixPorts>
+	  <devicePorts>
+	    <devicePort tagName="Default Out" type="AUDIO_DEVICE_OUT_STUB" role="sink">
+	    </devicePort>
+
+	    <devicePort tagName="Default In" type="AUDIO_DEVICE_IN_STUB" role="source">
+	    </devicePort>
+	  </devicePorts>
+	  <routes>
+	    <route type="mix" sink="Default Out" sources="stub output"/>
+
+	    <route type="mix" sink="stub input" sources="Default In"/>
+	  </routes>
+	</module>
+
+    <!-- Hearing Aid Audio HAL -->
+    <xi:include href="hearing_aid_audio_policy_configuration.xml"/>
+
+    <!-- Remote Submix Audio HAL -->
+    <xi:include href="r_submix_audio_policy_configuration.xml"/>
+
+    </modules>
+    <!-- End of Modules section -->
+
+    <!-- Volume section -->
+
+    <xi:include href="audio_policy_volumes.xml"/>
+    <xi:include href="default_volume_tables.xml"/>
+
+    <!-- End of Volume section -->
+
+</audioPolicyConfiguration>
