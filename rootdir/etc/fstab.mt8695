@@ -9,7 +9,7 @@
 /dev/block/platform/soc/11230000.mmc/by-name/cache      /cache       ext4   noatime,nosuid,nodev,noauto_da_alloc wait,check
 
 /devices/platform/soc/11240000.mmc* auto vfat defaults voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/soc/11271000.usb* auto vfat defaults voldmanaged=usbotg:auto,encryptable=userdata
+/devices/platform/soc/11271000.usb* auto auto defaults voldmanaged=usbotg:auto,encryptable=userdata
 
 /dev/block/platform/soc/11230000.mmc/by-name/lk            /bootloader     emmc  defaults defaults
 /dev/block/platform/soc/11230000.mmc/by-name/boot          /boot           emmc  defaults defaults
