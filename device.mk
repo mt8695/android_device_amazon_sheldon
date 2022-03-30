@@ -145,6 +145,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_nvram
+
 # Binder
 PRODUCT_PACKAGES += \
     libhidltransport \
