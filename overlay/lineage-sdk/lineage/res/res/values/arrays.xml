@@ -19,12 +19,12 @@
     <!-- Array of keycodes for special keys on device.
          Order & size must match with keyhandler_packages -->
     <integer-array name="keyhandler_keycodes">
-        <item>271</item> <!-- KEYCODE_VOICE_ASSIST -->
-        <item>362</item> <!-- KEYCODE_TV -->
-        <item>744</item> <!-- KEYCODE_BUTTON_1 -->
-        <item>745</item> <!-- KEYCODE_BUTTON_2 -->
-        <item>746</item> <!-- KEYCODE_BUTTON_3 -->
-        <item>747</item> <!-- KEYCODE_BUTTON_4 -->
+        <item>84</item> <!-- KEYCODE_SEARCH -->
+        <item>170</item> <!-- KEYCODE_TV -->
+        <item>188</item> <!-- KEYCODE_BUTTON_1 -->
+        <item>189</item> <!-- KEYCODE_BUTTON_2 -->
+        <item>190</item> <!-- KEYCODE_BUTTON_3 -->
+        <item>191</item> <!-- KEYCODE_BUTTON_4 -->
     </integer-array>
 
     <!-- Array of packages for special keys on device.
