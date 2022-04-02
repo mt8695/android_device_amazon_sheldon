@@ -23,6 +23,9 @@ $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 # Inherit from sheldon device
 $(call inherit-product, device/amazon/sheldon/device.mk)
 
+# Inherit go optimizations for sheldon
+$(call inherit-product, device/amazon/sheldon/go_opt.mk)
+
 PRODUCT_NAME := lineage_sheldon
 PRODUCT_DEVICE := sheldon
 PRODUCT_MANUFACTURER := Amazon
