@@ -117,6 +117,11 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libalsautils \
     libnbaio_mono \
+    audio.stub.default \
+    audio.usb.default \
+    audio_policy.stub \
+    audio.r_submix.default \
+    audio.hearing_aid.default \
     android.hardware.audio@2.0.vendor \
     android.hardware.audio@4.0.vendor \
     android.hardware.audio.effect@2.0.vendor \
