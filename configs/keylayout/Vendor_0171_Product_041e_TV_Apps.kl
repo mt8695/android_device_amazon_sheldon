@@ -30,5 +30,5 @@ key 362   TV
 # App Keys
 key 744   BUTTON_1    WAKE
 key 745   BUTTON_2    WAKE
-key 746   BUTTON_3    WAKE
-key 747   BUTTON_4    WAKE
+key 746   TV          WAKE
+key 747   ALL_APPS    WAKE

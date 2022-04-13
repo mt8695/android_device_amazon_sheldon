@@ -19,22 +19,40 @@
     <!-- Array of keycodes for special keys on device.
          Order & size must match with keyhandler_packages -->
     <integer-array name="keyhandler_keycodes">
-        <item>84</item> <!-- KEYCODE_SEARCH -->
-        <item>170</item> <!-- KEYCODE_TV -->
         <item>188</item> <!-- KEYCODE_BUTTON_1 -->
         <item>189</item> <!-- KEYCODE_BUTTON_2 -->
         <item>190</item> <!-- KEYCODE_BUTTON_3 -->
         <item>191</item> <!-- KEYCODE_BUTTON_4 -->
+        <item>192</item> <!-- KEYCODE_BUTTON_5 -->
+        <item>193</item> <!-- KEYCODE_BUTTON_6 -->
+        <item>194</item> <!-- KEYCODE_BUTTON_7 -->
+        <item>195</item> <!-- KEYCODE_BUTTON_8 -->
+        <item>196</item> <!-- KEYCODE_BUTTON_9 -->
+        <item>197</item> <!-- KEYCODE_BUTTON_10 -->
+        <item>198</item> <!-- KEYCODE_BUTTON_11 -->
+        <item>199</item> <!-- KEYCODE_BUTTON_12 -->
+        <item>200</item> <!-- KEYCODE_BUTTON_13 -->
+        <item>201</item> <!-- KEYCODE_BUTTON_14 -->
+        <item>202</item> <!-- KEYCODE_BUTTON_15 -->
     </integer-array>
 
     <!-- Array of packages for special keys on device.
          Order & size must match with keyhandler_keycodes -->
     <string-array name="keyhandler_packages">
-        <item>com.google.android.katniss</item>
-        <item>com.google.android.tv</item>
         <item>com.netflix.ninja</item>
         <item>com.amazon.amazonvideo.livingroom</item>
         <item>com.disney.disneyplus</item>
+        <item>com.hulu.livingroomplus</item>
         <item>com.amazon.music.tv</item>
+        <item>com.dazn</item>
+        <item>tv.abema</item>
+        <item>de.rtli.tvnow</item>
+        <item>uk.co.freeview.explore</item>
+        <item>ca.bellmedia.cravetv</item>
+        <item>com.imdbtv.livingroom</item>
+        <item>com.hbo.hbonow</item>
+        <item>com.sonyliv</item>
+        <item>com.graymatrix.did</item>
+        <item>ca.ctv.ctvgo</item>
     </string-array>
 </resources>
