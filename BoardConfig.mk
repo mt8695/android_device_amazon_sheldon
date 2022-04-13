@@ -118,6 +118,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt8695
 # SPL
 VENDOR_SECURITY_PATCH := 2018-10-05
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/configs/bluetooth
+
 # SEPolicy
 include device/mediatek/sepolicy/sepolicy.mk
 
