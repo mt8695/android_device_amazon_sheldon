@@ -133,7 +133,7 @@
     <xi:include href="usb_audio_policy_configuration.xml"/>
 
     <!-- Stub Audio HAL -->
-    <xi:include href="stub_audio_policy_configuration.xml.xml"/>
+    <xi:include href="stub_audio_policy_configuration.xml"/>
 
     <!-- Hearing Aid Audio HAL -->
     <xi:include href="hearing_aid_audio_policy_configuration.xml"/>
