@@ -26,6 +26,7 @@ vendor/lib/fireos.hardware.audiosignalprocessor@1.1.so
 vendor/lib/hw/fireos.hardware.audio@4.0-impl.so
 vendor/lib/hw/audio.primary.mt8695.so
 vendor/lib/hw/audio.r_submix.mt8695.so
+vendor/lib/hw/audio.btle.default.so
 vendor/lib/liblatencybenchmarker_interface.so
 vendor/lib/libmtkaudiospdif.so
 vendor/lib/libmediaextension_vendor.so
