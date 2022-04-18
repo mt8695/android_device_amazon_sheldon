@@ -108,6 +108,9 @@
 
         <!-- BTLE Remote Audio HAL -->
         <module name="btle" halVersion="2.0">
+            <attachedDevices>
+                <item>BTLE-In</item>
+            </attachedDevices>
             <mixPorts>
                 <mixPort name="btle_in" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
