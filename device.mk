@@ -45,6 +45,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Properties
 -include $(DEVICE_PATH)/configs/props/logging_props.mk
 
+# Keylayouts
+-include $(DEVICE_PATH)/keylayouts.mk
+
 # RRO
 PRODUCT_PACKAGES += \
     WifiOverlay \
@@ -205,54 +208,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/netflix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/netflix.xml \
     $(DEVICE_PATH)/configs/permissions/nrdp.modelgroup.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/nrdp.modelgroup.xml
-
-# Keylayouts
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041c.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041c.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0412.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0412.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0414.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0414.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0415.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0415.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_0418.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_0418.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041f.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041f.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_HBO_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_000a.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_HBO_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_000d.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_HBO_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0012.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_HBO_Hulu.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0015.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_HBO_Hulu.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0016.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_CTV_Crave.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_000b.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_CTV_Crave.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0022.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_CTV_Crave.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0023.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Zee5_Sony.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_000c.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Zee5_Sony.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0011.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_TV_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_000f.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_DAZN_TVNow.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0010.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_DAZN_TVNow.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_000e.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_DAZN_TVNow.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0013.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_HBO_Hulu.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_001a.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_HBO_Hulu.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0028.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Music_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_002e.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Music_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0024.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_TV_Explore.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0035.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_IMDB_Hulu.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0047.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_DAZN_Disney.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0048.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_DAZN_Crave.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0049.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_Music.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0038.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_DAZN_Music.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0039.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Apps_Music.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_003a.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Music_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0017.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_004e.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_004f.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Music_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_002c.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_Explore.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0042.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0044.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Apps_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0050.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Apps_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0051.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_TVNow.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0043.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Apps_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_003b.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_Apps.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0054.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_DAZN_Abema.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0055.kl \
-    $(DEVICE_PATH)/configs/keylayout/Vendor_0171_Product_041e_Disney_Music.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0171_Product_041e_Version_0058.kl
 
 # Shims
 PRODUCT_PACKAGES += \
