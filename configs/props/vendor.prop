@@ -18,6 +18,13 @@ ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 debug.stagefright.ccodec=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
+# Volume steps
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=25
+ro.config.alarm_vol_steps=25
+ro.config.ring_vol_steps=25
+ro.config.notification_vol_steps=25
+
 # Android OpenGL renderer configuration
 # Configure as if we're a 1080p 1GB device
 # (we can consider Mantis Tank + .5GB for 4k)
