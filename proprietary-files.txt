@@ -218,7 +218,6 @@ vendor/firmware/woble_setting_7663.bin
 
 # Kernel Modules
 vendor/lib/modules/btmtksdio.ko
-vendor/lib/modules/hid_ftv_bleremote.ko|cf6e28143204002fe0a54e44f71bf2e0d6ee7523
 vendor/lib/modules/wlan_mt76x3_sdio.ko
 vendor/lib/modules/wlan_mt76x3_sdio_prealloc.ko
 
