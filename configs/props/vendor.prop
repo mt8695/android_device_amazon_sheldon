@@ -5,7 +5,7 @@ ro.vendor.mtk_tb_hdmi=internal,hidl,1080plimit
 
 # Display
 ro.amazon.sys.fbs-size=1920x1080
-ro.vendor.mtk_pq_support=2
+ro.vendor.mtk_pq_support=0
 ro.vendor.mtk_pq_color_mode=1
 ro.vendor.dpframework.not_support_yv12=1
 debug.sf.disable_backpressure=1
