@@ -71,15 +71,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt8695 \
     fstab.mt8695_ramdisk \
-    factory_init.project.rc \
-    factory_init.rc \
     init.connectivity.rc \
     init.mt8695.rc \
     init.mt8695.usb.rc \
     init.project.rc \
     init.nvdata.rc \
-    meta_init.rc \
-    multi_init.rc \
     ueventd.mtk.rc
 
 # Permissions
