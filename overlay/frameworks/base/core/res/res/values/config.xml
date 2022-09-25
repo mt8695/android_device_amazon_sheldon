@@ -76,4 +76,8 @@
          STREAM_MUSIC as if it's on TV platform. -->
     <bool name="config_single_volume">true</bool>
 
+    <!-- Determines whether recent tasks are provided to the user. Default device has recents
+         property. If this is false, then the following recents config flags are ignored. -->
+    <bool name="config_hasRecents">false</bool>
+
 </resources>
