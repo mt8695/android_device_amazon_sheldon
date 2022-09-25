@@ -67,4 +67,13 @@
     <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
     <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
 
+    <!-- Flag indicating that the media framework should not allow changes or mute on any
+         stream or master volumes. -->
+    <bool name="config_useFixedVolume">true</bool>
+
+    <!-- Flag indicating whether all audio streams should be mapped to
+         one single stream. If true, all audio streams are mapped to
+         STREAM_MUSIC as if it's on TV platform. -->
+    <bool name="config_single_volume">true</bool>
+
 </resources>
