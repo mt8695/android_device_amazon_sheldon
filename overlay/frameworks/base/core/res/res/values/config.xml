@@ -18,6 +18,27 @@
         <item>ethernet,9,9,9,-1,true</item>
     </string-array>
 
+    <!-- Flag indicating whether the current device is "voice capable".
+         If true, this means that the device supports circuit-switched
+         (i.e. voice) phone calls over the telephony network, and is
+         allowed to display the in-call UI while a cellular voice call is
+         active.  This can be overridden to false for "data only" devices
+         which can't make voice calls and don't support any in-call UI.
+         Note: this flag is subtly different from the
+         PackageManager.FEATURE_TELEPHONY system feature, which is
+         available on *any* device with a telephony radio, even if the
+         device is data-only. -->
+    <bool name="config_voice_capable">false</bool>
+
+    <!-- Flag indicating whether the current device allows sms service.
+         If true, this means that the device supports both sending and
+         receiving sms via the telephony network.
+         This can be overridden to false for "data only" devices
+         which can't send and receive sms message.
+         Note: Disable SMS also disable voicemail waiting sms,
+               cell broadcasting sms, and MMS. -->
+    <bool name="config_sms_capable">false</bool>
+
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
